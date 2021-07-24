@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
     })
     res.status(200).json(productAllData)
   } catch (e) {
-    res.status(400).json(E)
+    res.status(500).json(e)
   }
 });
 
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
     })
     res.status(200).json(productOneData)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 });
 // create new product
@@ -64,8 +64,8 @@ router.post('/', (req, res) => {
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
+      console.log(e);
+      res.status(404).json(e);
     });
 });
 
@@ -107,7 +107,7 @@ router.put('/:id', (req, res) => {
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((e) => {
       console.log(e)
-      res.status(400).json(e);
+      res.status(404).json(e);
     });
 });
 
@@ -118,7 +118,7 @@ router.delete('/:id', (req, res) => {
     res.status(200).json(productDeleteData)
   } catch (e) {
     console.log(e)
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 });
 

@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
     })
     res.status(200).json(categoryOneData)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 });
 
@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
     const categoryPostData = Category.create(req.body)
     res.status(200).json(categoryPostData)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 });
 
@@ -48,7 +48,7 @@ router.put('/:id', (req, res) => {
     })
     res.status(200).json(categoryUpdateData)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 
 });
@@ -63,7 +63,7 @@ router.delete('/:id', (req, res) => {
     })
     res.status(200).json(categoryDeleteData)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(404).json(e)
   }
 
 });
