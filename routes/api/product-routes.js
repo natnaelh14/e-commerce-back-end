@@ -122,7 +122,7 @@ router.delete('/:id', async(req, res) => {
   // delete one product by its `id` value
   try {
     await Product.destroy({where: {id: req.params.id}})
-    res.status(200).json({id: req.params.id})
+    res.status(200).json(`Deleted Category with the id ${req.params.id}`)
     
   } catch (e) {
     console.log(e)
