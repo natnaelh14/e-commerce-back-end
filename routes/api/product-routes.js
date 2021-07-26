@@ -40,6 +40,14 @@ router.get('/:id', async(req, res) => {
 router.post('/', (req, res) => {
   
   Product.create(
+      /* req.body should look like this...
+    {
+      product_name: "Basketball",
+      price: 200.00,
+      stock: 3,
+      tagIds: [1, 2, 3, 4]
+    }
+  */
     {
       product_name: req.body.product_name,
       price: req.body.price,
@@ -113,8 +121,9 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', async(req, res) => {
   // delete one product by its `id` value
   try {
-    const productDeleteData = await Product.destroy({where: {id: req.params.id}})
-    res.status(200).json(productDeleteData)
+    await Product.destroy({where: {id: req.params.id}})
+    res.status(200).json({id: req.params.id})
+    
   } catch (e) {
     console.log(e)
     res.status(404).json(e)
