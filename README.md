@@ -19,7 +19,9 @@ To run necessary dependencies, run the following command:
 * create a database
 * npm start
 ## Usage
+* Youtube Link
 [![IMAGE ALT TEXT](/screenshot.png)](https://www.youtube.com/watch?v=9CyDWz6U_Mo "Demo")
+* Screenshot
 ![alt text](/screenshot.png)
 ## License
 Copyright (C) 2021 Natnael Haile
