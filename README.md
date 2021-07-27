@@ -19,7 +19,7 @@ To run necessary dependencies, run the following command:
 * create a database
 * npm start
 ## Usage
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=9CyDWz6U_Mo "Demo")
+[![IMAGE ALT TEXT](/screenshot.png)](https://www.youtube.com/watch?v=9CyDWz6U_Mo "Demo")
 ![alt text](/screenshot.png)
 ## License
 Copyright (C) 2021 Natnael Haile
